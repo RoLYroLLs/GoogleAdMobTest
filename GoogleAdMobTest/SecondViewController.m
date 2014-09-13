@@ -7,6 +7,8 @@
 //
 
 #import "SecondViewController.h"
+#import "GADBannerView.h"
+#import "GADRequest.h"
 
 @interface SecondViewController ()
 
@@ -18,6 +20,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	self.bannerView.adUnitID = @"ca-app-pub-7038667452523799/9060866068";
+	self.bannerView.rootViewController = self;
+	
+	GADRequest *request = [GADRequest request];
+	// Enable test ads on simulators.
+	request.testDevices = @[ GAD_SIMULATOR_ID ];
+	[self.bannerView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning

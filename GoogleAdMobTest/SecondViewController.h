@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class GADBannerView;
+
 @interface SecondViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
 
 @end
