@@ -21,6 +21,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
+	[self setEdgesForExtendedLayout:UIRectEdgeNone];
+	
 	self.bannerView.adUnitID = @"ca-app-pub-7038667452523799/9060866068";
 	self.bannerView.rootViewController = self;
 	
